@@ -1,8 +1,8 @@
-import axios from 'axios';
+//import axios from 'axios';
 import React from 'react'
 import RequestStatusPage from '../../components/request-status-page/RequestStatusPage';
 import Layout from '../../layout/Layout';
-import { requestProp, userObjectProp } from "../../../interfaces/index"
+//import { requestProp, userObjectProp } from "../../../interfaces/index"
 
 
 const RequestStatus = () => {
@@ -16,7 +16,7 @@ const RequestStatus = () => {
 
 export default RequestStatus;
 
-export async function getServerSideProps(context: any) {
+export async function getServerSideProps() {
   // const requestid = context.params.reqstatus;
 
   // const request = await axios.get(`${process.env.PROD_LOCAL_URL}/api/request-status/${requestid}`);

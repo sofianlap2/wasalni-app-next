@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { requireAuthentification } from '../../../contexts/requireAuthentification';
 import MyRequests from '../../components/requests/MyRequests';
 import Layout from '../../layout/Layout';
