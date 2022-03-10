@@ -6,7 +6,7 @@ import { RootState } from "../../redux/Store";
 import { useSelector } from "react-redux";
 import { useSnackbar } from 'notistack';
 import { useRouter } from "next/router";
-import MapWrapper from "./MapWrapper";
+//import MapWrapper from "./MapWrapper";
 // import { styled } from "@mui/material/styles";
 // import Switch from "@mui/material/Switch";
 // import FormGroup from "@mui/material/FormGroup";
@@ -159,9 +159,9 @@ const DestinationPage = () => {
           </div>
         </form>
 
-        <div className={styles.map_wrapper} >
+        {/* <div className={styles.map_wrapper} >
           <MapWrapper />
-        </div>
+        </div> */}
       </div>
     </div>
   );
