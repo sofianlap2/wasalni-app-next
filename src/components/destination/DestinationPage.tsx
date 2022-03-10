@@ -95,8 +95,8 @@ const DestinationPage = () => {
   }
 
   const onSubmit = async (requestData: any) => {
-    closeSnackbar();
     try {
+      closeSnackbar();
       if (userId && requestData) {
         const { data } = await axios.post(`/api/destination/${userId}`, requestData);
         if (data) {
