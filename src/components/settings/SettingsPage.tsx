@@ -42,6 +42,7 @@ const SettingsPage = ({ title, users, price }: Props) => {
     dispatch(getUsers(users))
     dispatch(getPrice(price[0].price))
     dispatch(getAdress(price[0].adress))
+    setPriceId(price[0]._id)
   }, [])
 
   const onSubmit = handleSubmit(async (formData: any) => {

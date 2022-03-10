@@ -20,7 +20,7 @@ handler.patch(async (req: any, res: any) => {
     await db.connect();
 
     const { query: { requestid } } = req;
-    const acceptedById = req.body.acceptebby;
+    //const acceptedById = req.body.acceptebby;
 
     const userAccept = await User.findOne({ _id: req.body.acceptebby })
     await Request.findOneAndUpdate(

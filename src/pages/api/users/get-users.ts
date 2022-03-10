@@ -5,6 +5,7 @@ import db from '../../../../utils/db';
 const handler = nc();
 
 handler.get(async (req ,res : any) => {
+    console.log(req)
     await db.connect();
     const users = await User.find()
     await db.disconnect();

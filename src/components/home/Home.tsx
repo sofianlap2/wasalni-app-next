@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from '../../../styles/Home.module.scss'
 import { userInfo } from "../../redux/features/auth/auth"

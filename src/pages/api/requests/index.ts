@@ -4,7 +4,8 @@ import db from '../../../../utils/db';
 
 const handler = nc();
 
-handler.get(async (req ,res : any) => {
+handler.get(async (req  ,res : any) => {
+    console.log(req)
     await db.connect();
     const requests = await Request.find()
     await db.disconnect();

@@ -7,7 +7,7 @@ import { userInfo } from "../../redux/features/auth/auth"
 import PickUpCard from "./PickUpCard";
 //import useSWR from 'swr';
 import axios from "axios";
-import { requestInfoState } from "../../../interfaces/index"
+//import { requestInfoState } from "../../../interfaces/index"
 
 //const fetcher = (url: any) => fetch(url).then((res) => res.json());
 
