@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./homeConductor.module.scss";
-import { RootState } from "../../redux/Store";
-import { useSelector } from "react-redux";
+// import { RootState } from "../../redux/Store";
+// import { useSelector } from "react-redux";
 import Link from "next/link";
 import { requestProp } from "../../../interfaces/index"
 import RequestCardConductor from "./RequestCardConductor";
@@ -13,7 +13,7 @@ import { requestInfoState } from "../../../interfaces/index"
 
 const MyRequests = ({ title }: { title: string }) => {
 
-  const user = useSelector((state: RootState) => state.authReducer.userInfo);
+  //const user = useSelector((state: RootState) => state.authReducer.userInfo);
   //const { data, error } = useSWR('/api/requests', fetcher);
   const [filteredData, setFilteredData] = useState<any>([]);
   const [allData, setAllData] = useState<any>([]);
@@ -59,7 +59,7 @@ const MyRequests = ({ title }: { title: string }) => {
         <div className={styles.requests_container}>
 
           {filteredData?.map((request: requestProp) => (
-            <RequestCardConductor key={request._id} request={request} userInfo={user} />
+            <RequestCardConductor key={request._id} request={request} />
           ))}
 
         </div>
