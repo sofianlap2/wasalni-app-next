@@ -1,0 +1,145 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/fonts.scss';
+
+.container {
+    background-color: #E5E5E5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.logo_wassalni {
+    margin-top: 35px;
+    margin-bottom: 46px;
+}
+
+.welcome_text {
+    font-family: "Druk Medium";
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 52px;
+    margin-top: 0;
+    margin-bottom: 46px;
+
+    @include breakpoint(mobile) {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+
+.form_login {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(tablet) {
+        width: 60%;
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.form_login > div {
+    border-bottom: none;
+}
+
+.form_inp {
+    background-color: #E5E5E5;
+    border: none;
+    border-bottom: 1.5px solid #000000;
+    padding: 11px 0;
+    margin-bottom: 37px;
+    width: 100%;
+    font-size: 20px;
+    font-family: "Inter Regular";
+    font-weight: 400;
+    padding-left: 10px;
+    
+    @include breakpoint-reverse(tablet) {
+        width: 490px;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        font-family: "Inter Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit_btn {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    background-color: #E5E5E5;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.submit_span {
+    font-family: "Inter Medium";
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    margin-right: 17px;
+
+    @include breakpoint(mobile) {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+.forget_link {
+    font-family: "Inter Regular";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #767676;
+    border-bottom: 1px solid #767676;
+    cursor: pointer;
+
+    @include breakpoint(mobile) {
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+.image_container_desktop {
+    width: 100%;
+    height: 329px;
+    position: relative;
+    margin-top: auto;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.image_container_mobile {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-top: auto;
+
+    @include breakpoint-reverse(mobile) {
+        display: none;
+    }
+}
+
+.error_msg {
+    color: red;
+}

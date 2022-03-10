@@ -1,0 +1,113 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/fonts.scss';
+
+.container {
+    background-color: #E5E5E5;
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 50px;
+
+    @include breakpoint-reverse(tablet) {
+        padding-top: 140px;
+    }
+}
+
+.wrapper {
+    position: relative;
+
+    @include breakpoint-reverse(tablet) {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 50px;
+    }
+}
+
+.form_wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+}
+
+.map_wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.input_time {
+    background-color: #E5E5E5;
+    border: none;
+    margin-left: 15px;
+    font-family: "Inter Medium";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.input_price {
+    background-color: #E5E5E5;
+    border: none;
+    margin-left: 15px;
+    width: 50px;
+    font-family: "Druk Medium";
+    font-weight: 500;
+}
+
+.price_label {
+    font-family: "Inter Light";
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.btn_save {
+    background-color: black;
+    padding: 11px 30px;
+    min-width: 184px;
+    color: white;
+    font-family: "Inter Medium";
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 4px;
+    display: block;
+    border: none;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 24px;
+        line-height: 29px;
+        padding: 17px 50px;
+        border-radius: 12px;
+    }
+}
+
+.price_submit_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+}
+
+.calendar_wrapper {
+    margin-bottom: 52px;
+    display: flex;
+    flex-direction: column;
+}
+
+.time_wrapper {
+    padding-bottom: 40px;
+    border-bottom: 1px solid black;
+}
+
+.select_date_label {
+    padding-bottom: 50px;
+    font-family: "Inter Medium";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.time_label {
+    font-family: "Inter Medium";
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+}

@@ -1,0 +1,286 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/fonts.scss';
+
+.container {
+    background-color: #E5E5E5;
+    min-height: 100vh;
+    padding: 0 20px;
+
+    @include breakpoint-reverse(tablet) {
+        padding: 0 50px;
+    }
+}
+
+.title {
+    margin: 0;
+    padding: 90px 0 40px 0;
+    text-align: center;
+    font-family: "Druk Medium";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+
+    @include breakpoint-reverse(tablet) {
+        padding: 197px 0 77px 0;
+        font-size: 52px;
+        line-height: 52px;
+    }
+}
+
+.email_column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_column {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include breakpoint-reverse(tablet) {
+        padding: 15px;
+    }
+}
+
+.btn_add {
+    background-color: #E5E5E5;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    font-family: "Inter Medium";
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 30px;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+}
+
+.price_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.price_header {
+    font-family: "Inter Bold";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: black;
+    margin-right: 8px;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 22px;
+        line-height: 27px;
+        flex: 1 1 30%;
+        max-width: 30%;
+    }
+}
+
+.price_content {
+    font-family: "Inter Regular";
+    font-family: 400;
+    font-size: 9px;
+    line-height: 15px;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+.price_edit {
+    margin-left: auto;
+    width: 10px;
+    height: 10px;
+    position: relative;
+
+    @include breakpoint-reverse(tablet) {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.btn_save {
+    background-color: black;
+    padding: 11px 30px;
+    min-width: 184px;
+    color: white;
+    font-family: "Inter Medium";
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 4px;
+    margin: 40px auto 0 auto;
+    display: block;
+    border: none;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: 0;
+        padding: 17px 50px;
+        border-radius: 12px;
+    }
+}
+
+.settings_layout {
+    display: flex;
+    gap: 100px;
+}
+
+.table_head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    align-items: center;
+}
+
+.user_table_container {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.avatar_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email_icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit_img {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+
+    @include breakpoint-reverse(tablet) {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.avatar_img {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    margin: 0 10px;
+
+    @include breakpoint-reverse(tablet) {
+        width: 78px;
+        height: 78px;
+    }
+}
+
+.table_container {
+    @include breakpoint-reverse(tablet) {
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+}
+
+.layout_content {
+    @include breakpoint-reverse(tablet) {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex: 1 1 50%;
+        max-width: 50%;
+    }
+
+    @include breakpoint-reverse(desktop) {
+        gap: 80px;
+    }
+}
+
+.first_column {
+    @include breakpoint-reverse(tablet) {
+        flex: 1 1 56%;
+        max-width: 56%;
+    }
+}
+
+.second_column {
+    @include breakpoint-reverse(tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.modal {
+    top: '50%';
+    left: '50%';
+    right: 'auto';
+    bottom: 'auto';
+    margin-right: '-50%';
+    transform: 'translate(-50%, -50%)';
+}
+
+.form_modal {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-reverse(tablet) {
+        min-width: 500px;
+    }
+}
+
+.modal_inp {
+    width: 100%;
+    background-color: white;
+    border: none;
+    border-bottom: 1.5px solid #000000;
+    padding: 11px 0;
+    margin-bottom: 37px;
+    width: 100%;
+    font-size: 20px;
+    font-family: "Inter Regular";
+    font-weight: 400;
+    padding-left: 10px;
+    
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        font-family: "Inter Regular";
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: gray;
+    }
+}
+
+.modal_btn {
+    display: block;
+    border: none;
+    font-family: "Inter Medium";
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 17px 50px;
+    border-radius: 12px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}

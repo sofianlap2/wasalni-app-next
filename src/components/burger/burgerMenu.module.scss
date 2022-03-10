@@ -1,0 +1,134 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/fonts.scss';
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #E5E5E5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    //z-index: 99;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    @include breakpoint-reverse(tablet) {
+        padding: 28px 51px;
+    }
+}
+
+.arrow_left {
+    width: 30px;
+    height: 24px;
+    position: relative;
+
+    @include breakpoint-reverse(tablet) {
+        display: none;
+    }
+}
+
+.menu_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    background-color: #E5E5E5;
+}
+
+.logo {
+    width: 102px;
+    height: 20px;
+    position: relative;
+    display: none;
+
+    @include breakpoint-reverse(tablet) {
+        width: 250px;
+        height: 49px;
+    }
+}
+
+.close_burger {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+
+    @include breakpoint-reverse(tablet) {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+.avatar {
+    width: 67px;
+    height: 67px;
+    position: relative;
+    margin-bottom: 30px;
+
+    @include breakpoint-reverse(tablet) {
+        width: 114px;
+        height: 114px;
+        margin-bottom: 46px;
+    }
+}
+
+.links_list {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: "Druk Medium";
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 18px;
+
+        @include breakpoint-reverse(tablet) {
+            font-size: 42px;
+            line-height: 42px;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.btn_request {
+    background-color: black;
+    padding: 11px 30px;
+    min-width: 184px;
+    color: white;
+    font-family: "Inter Medium";
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 4px;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+.logout {
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-family: "Druk Medium";
+    font-family: 500;
+    font-size: 32px;
+    line-height: 32px;
+    padding-right: 41px;
+}

@@ -1,0 +1,14 @@
+before_script:
+  - cd ~
+  - echo "$SSH_PRIVATE_KEY" > "ssh_private_key"
+  - chmod 400 ssh_private_key
+
+deploy_dev:
+  stage: deploy
+  environment:
+    name: main
+    url: sofienne.waselni.dev.aleia.io
+  script:
+    - ssh -o StrictHostKeyChecking=no -i ssh_private_key www-data@sofienne.waselni.dev.aleia.io "cd vhosts/sofienne.waselni.dev.aleia.io && git pull origin main && rm -rf out && yarn install && exit"
+  only:
+    - main

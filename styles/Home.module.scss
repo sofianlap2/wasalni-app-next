@@ -1,0 +1,88 @@
+@import '../styles/mixins.scss';
+@import '../styles/fonts.scss';
+
+.container {
+    background-color: #E5E5E5;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome_title {
+    font-family: "Druk Medium";
+    font-size: 18px;
+    line-height: 18px;
+    color: black;
+    margin-bottom: 7px;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 62px;
+        line-height: 62px;
+        margin-bottom: 40px;
+    }
+}
+
+.description {
+    font-family: "Inter Medium";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 31px;
+
+    @include breakpoint-reverse(tablet) {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 70px;
+    }
+}
+
+.buttons_container {
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+        flex-direction: column;
+    }
+}
+
+.button_departure, .button_return {
+    font-family: "Inter Medium";
+    padding: 22px 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    display: block;
+    min-width: 368px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        min-width: auto;
+        padding: 10px 10px;
+        min-width: 184px;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.button_departure {
+    background-color: #E5E5E5;
+    color: black;
+    margin-right: 46px;
+
+    @include breakpoint(tablet) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.button_return {
+    background-color: #000000;
+    color: white;
+}

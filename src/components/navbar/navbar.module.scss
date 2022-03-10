@@ -1,0 +1,45 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/fonts.scss';
+
+.container {
+    position: relative;
+    position: fixed;
+    top: 51px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+
+    @include breakpoint(tablet) {
+        top: 20px;
+        padding: 0 20px;
+    }
+}
+
+.logo {
+    width: 243px;
+    height: 47px;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+
+    @include breakpoint(tablet) {
+        width: 102px;
+        height: 20px;
+    }
+}
+
+.burger {
+    width: 65px;
+    height: 31px;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+
+    @include breakpoint(tablet) {
+        width: 21px;
+        height: 12px;
+    }
+}

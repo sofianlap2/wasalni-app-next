@@ -1,0 +1,22 @@
+.overlay {
+  background: white;
+  padding: 50px;
+  position: relative;
+}
+.btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  font-family: "Inter Medium";
+  font-size: 15px;
+  line-height: 29px;
+  margin-left: auto;
+  margin-right: 0;
+  padding: 5px 15px;
+  border-radius: 12px;
+  background-color: #000000;
+  color: white;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
