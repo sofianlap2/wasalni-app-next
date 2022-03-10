@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import styles from "./homeConductor.module.scss";
-import { requestProp, userObjectProp } from "../../../interfaces/index"
+import { requestProp } from "../../../interfaces/index"
 import { useRouter } from 'next/router';
 import axios from 'axios';
 
-const RequestCardConductor = ({ request, userInfo }: { request: requestProp, userInfo: userObjectProp }) => {
+const RequestCardConductor = ({ request }: { request: requestProp}) => {
 
     const router = useRouter();
     const [user, setUser] = useState<string>('');
